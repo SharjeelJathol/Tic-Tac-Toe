@@ -20,6 +20,9 @@ let checkWin=()=>{
 
     wins.forEach(element => {
         if(boxes[element[0]].innerText===boxes[element[1]].innerText&&boxes[element[1]].innerText===boxes[element[2]].innerText&&boxes[element[2]].innerText!=''){
+            for (let index = 0; index < boxes.length; index++) {
+                boxes[index].innerText=''; 
+            }
             alert(`${turn} has won the Game.`)
             return
         }
